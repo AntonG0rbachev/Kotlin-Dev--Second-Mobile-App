@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SecondMobileApp</string>
+    <string name="firstQuestion">Вы бы когда-нибудь позволили кому-то другому выбирать вам одежду?</string>
+    <string name="secondQuestion">Вы считаете себя счастливым и хорошим человеком?</string>
+    <string name="thirdQuestion">ВОВА хороший человек?</string>
+    <string name="fourthQuestion">Вам нравится котлин?</string>
+    <string name="fifthQuestion">Вы бы хотели побывать в Магадане?</string>
+    <string name="sixthQuestion">Вы отправляетесь в Магадан?</string>
+    <string name="seventhQuestion">ДА?</string>
+</resources>
