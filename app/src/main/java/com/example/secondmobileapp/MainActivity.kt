@@ -19,6 +19,33 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        updateQuestion()
+
+        btnTrue = findViewById(R.id.btnTrue)
+        btnFalse = findViewById(R.id.btnFalse)
+        nextButton = findViewById(R.id.imbtn1)
+        prevButton = findViewById(R.id.imbtn2)
+        questionTextView = findViewById(R.id.tv1)
+
+        btnTrue.setOnClickListener {
+            checkAnswer(true)
+        }
+
+        btnFalse.setOnClickListener {
+            checkAnswer(false)
+        }
+
+        nextButton.setOnClickListener {
+            quizViewModel.moveToNext()
+            updateQuestion()
+        }
+
+        prevButton.setOnClickListener {
+            quizViewModel.moveToPrev()
+            updateQuestion()
+        }
+
     }
 
     private lateinit var btnTrue: Button
@@ -31,4 +58,5 @@ class MainActivity : AppCompatActivity() {
         val provider = ViewModelProvider(this)
         provider.get(MainActivityViewModel::class.java)
     }
+
 }
