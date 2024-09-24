@@ -12,6 +12,12 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var btnTrue: Button
+    private lateinit var btnFalse: Button
+    private lateinit var nextButton: ImageButton
+    private lateinit var prevButton: ImageButton
+    private lateinit var questionTextView: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -49,12 +55,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
-    private lateinit var btnTrue: Button
-    private lateinit var btnFalse: Button
-    private lateinit var nextButton: ImageButton
-    private lateinit var prevButton: ImageButton
-    private lateinit var questionTextView: TextView
 
     private val quizViewModel: MainActivityViewModel by lazy {
         val provider = ViewModelProvider(this)
