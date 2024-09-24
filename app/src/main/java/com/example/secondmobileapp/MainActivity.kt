@@ -28,13 +28,13 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        updateQuestion()
-
         btnTrue = findViewById(R.id.btnTrue)
         btnFalse = findViewById(R.id.btnFalse)
         nextButton = findViewById(R.id.imbtn1)
         prevButton = findViewById(R.id.imbtn2)
         questionTextView = findViewById(R.id.tv1)
+
+        updateQuestion()
 
         btnTrue.setOnClickListener {
             checkAnswer(true)
