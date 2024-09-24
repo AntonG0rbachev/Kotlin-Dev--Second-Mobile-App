@@ -7,4 +7,6 @@
     <string name="fifthQuestion">Вы бы хотели побывать в Магадане?</string>
     <string name="sixthQuestion">Вы отправляетесь в Магадан?</string>
     <string name="seventhQuestion">ДА?</string>
+    <string name="false_text">ложно</string>
+    <string name="true_text">верно</string>
 </resources>
