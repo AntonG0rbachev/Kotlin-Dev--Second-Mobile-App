@@ -3,6 +3,7 @@ package com.example.secondmobileapp
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -57,6 +58,20 @@ class MainActivity : AppCompatActivity() {
     private val quizViewModel: MainActivityViewModel by lazy {
         val provider = ViewModelProvider(this)
         provider.get(MainActivityViewModel::class.java)
+    }
+
+    private fun updateQuestion() {
+        val questionTextResId = quizViewModel.currentQuestionText
+        questionTextView.setText(questionTextResId)
+    }
+
+    private fun checkAnswer(userAnswer: Boolean) {
+        val correctAnswer = quizViewModel.currentQuestionAnswer
+        val messageReId = when {
+            userAnswer == correctAnswer -> R.string.true_text
+            else -> R.string.false_text
+        }
+        Toast.makeText(this, messageReId, Toast.LENGTH_LONG).show()
     }
 
 }
