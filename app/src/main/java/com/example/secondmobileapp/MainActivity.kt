@@ -86,7 +86,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkAnswer(userAnswer: Boolean) {
         val correctAnswer = quizViewModel.currentQuestionAnswer
+        val isCheat = quizViewModel.isCheater
         val messageReId = when {
+            isCheat -> R.string.cheater_text
             userAnswer == correctAnswer -> R.string.true_text
             else -> R.string.false_text
         }
