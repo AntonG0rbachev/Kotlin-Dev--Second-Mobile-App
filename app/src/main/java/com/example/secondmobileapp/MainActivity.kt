@@ -54,6 +54,11 @@ class MainActivity : AppCompatActivity() {
             updateQuestion()
         }
 
+        findViewById<Button>(R.id.cheatBtn).setOnClickListener {
+            val intent = CheatActivity.newIntent(this@MainActivity, quizViewModel.currentQuestionAnswer)
+            startActivity(intent)
+        }
+
     }
 
     private val quizViewModel: MainActivityViewModel by lazy {
