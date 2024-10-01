@@ -14,6 +14,8 @@ class MainActivityViewModel : ViewModel() {
         Question(R.string.seventhQuestion, false),
     )
 
+    var isCheater = false
+
     private var currentIndex = 0
     val currentQuestionAnswer: Boolean
         get() = questionBank[currentIndex].answer
