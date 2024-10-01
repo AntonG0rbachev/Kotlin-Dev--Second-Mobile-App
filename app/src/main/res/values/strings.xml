@@ -9,4 +9,6 @@
     <string name="seventhQuestion">ДА?</string>
     <string name="false_text">ложно</string>
     <string name="true_text">верно</string>
+    <string name="answer_is_true">true</string>
+    <string name="answer_shown">false</string>
 </resources>
