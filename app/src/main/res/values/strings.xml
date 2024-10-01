@@ -11,4 +11,5 @@
     <string name="true_text">верно</string>
     <string name="answer_is_true">true</string>
     <string name="answer_shown">false</string>
+    <string name="cheater_text">Списывать не хорошо!</string>
 </resources>
